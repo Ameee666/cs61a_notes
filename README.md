@@ -1,2 +1,3 @@
-# cs61a_notes
-my first note
+# cs61a_notes_lec23
+first try
+
