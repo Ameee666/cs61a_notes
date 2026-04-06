@@ -35,3 +35,20 @@ def count_frames(f):
     counted.open_frame = 0
     counted.max_frame = 0
     return counted
+"""乘方函数，展示同一个函数的不同实现"""
+def exp(b,n):
+    if b == 0:
+        return 1
+    else:
+        return b*exp(b,n-1)
+"""显然，这是一个正确而缓慢的函数"""
+def exp_fast(b,n):
+    if b==0:
+        return 1
+    elif b%2 == 0:
+        return square(exp_fast(b,n//2))
+    else:
+        return b*exp(b,n-1)
+def square(n):
+    return n*n
+"""加速的关键在于函数在处理偶数次幂时，采取对数时间增长"""
